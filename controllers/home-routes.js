@@ -44,10 +44,10 @@ router.get('/', (req, res) => {
       res.status(500).json(err);
     });
 });
+
+
+
 router.get('/post/:id', (req, res) => {
-  
-  console.log(`\n BUMBUM:  ========== : ${req} \n`);
-  
   Post.findOne({
     where: {
       id: req.params.id
